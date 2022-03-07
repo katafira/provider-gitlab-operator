@@ -4,6 +4,7 @@
 cover.out
 /vendor
 /.vendor-new
+/onPremiseGitLab
 .DS_Store
 adapted_commands.sh
 # ignore IDE folders
