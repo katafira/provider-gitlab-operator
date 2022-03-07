@@ -1,8 +1,8 @@
 # ====================================================================================
 # Setup Project
 
-PROJECT_NAME := provider-jet-gitlab
-PROJECT_REPO := github.com/crossplane-contrib/$(PROJECT_NAME)
+PROJECT_NAME := provider-gitlab-operator
+PROJECT_REPO := github.com/katafira/$(PROJECT_NAME)
 
 export TERRAFORM_VERSION := 1.1.6
 

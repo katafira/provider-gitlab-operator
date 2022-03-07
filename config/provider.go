@@ -22,11 +22,12 @@ import (
 
 	tjconfig "github.com/crossplane/terrajet/pkg/config"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
+	"github.com/katafira/provider-gitlab-operator/config/project"
 )
 
 const (
 	resourcePrefix = "gitlab"
-	modulePath     = "github.com/crossplane-contrib/provider-jet-gitlab"
+	modulePath     = "github.com/katafira/provider-gitlab-operator"
 )
 
 //go:embed schema.json
@@ -45,11 +46,12 @@ func GetProvider() *tjconfig.Provider {
 	    tjconfig.WithDefaultResourceFn(defaultResourceFn),
 	    tjconfig.WithIncludeList([]string{
 	        "gitlab_project$",
-	        "gitlab_branch$",
+//	        "gitlab_branch$",
 	    }))
 
 	for _, configure := range []func(provider *tjconfig.Provider){
 		// add custom config functions
+		project.Configure,
 	} {
 		configure(pc)
 	}
