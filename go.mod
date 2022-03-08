@@ -1,4 +1,4 @@
-module github.com/crossplane-contrib/provider-jet-template
+module github.com/katafira/provider-gitlab-operator
 
 go 1.17
 
